@@ -1,0 +1,25 @@
+function devColorChange() {
+  	$(".top").animate({
+  						backgroundColor: "#CC5C54"
+  				}, 500 );
+  	$(".second").animate({
+  						backgroundColor: "#F69162"
+  			  }, 500 );
+	$(".third").animate({
+				  		backgroundColor: "#FFFFCD"
+				  }, 500 );			  	
+    $(".bottom").animate({
+    			  	   backgroundColor: "#85A562"
+    			}, 500 );			  	
+   
+   // $(".top").css("background", "#CC5C54");
+   // $(".second").css("background-color", "#F69162");
+   // $(".third").css("background-color", "#FFFFCD");
+   // $(".bottom").css("background-color", "#85A562");
+  }
+
+  $(document).ready(function () {
+   $("#dev").hover(
+   	 function() { devColorChange(); }
+   	             ) // end of hover
+  });
