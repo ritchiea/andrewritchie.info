@@ -1,5 +1,5 @@
 body {
-	width: 1140px;
+	width: 100%;
 	background: #8C8C8C;
 }
 
@@ -23,7 +23,7 @@ h1 {
 
 .header-background {
     background-color: #4C4C4C;
-	opacity: .7;
+	opacity: .8;
 	width: 830px;
   	height: 130px;
 	padding: 0;
@@ -33,56 +33,66 @@ h1 {
 	z-index: 100;
 }
 
-h2 {
+p {
+/*    position: absolute;
+    top: 310px;
+    right: 420px;*/
 	color: #404040;
 	font-family: 'lavanderia_regularregular';
 	font-size: 36px;
+    display: inline;
+    margin-left: 33%;
+    margin-right: 33%;
 }
 
-h2#dev {
-	position: absolute;
-	right: 21px;
-	bottom: 85px;
+#middle-section {
+    background-image:url('images/use_your_illusion.png');
+    height: 80px;
+    width: 100%;
 }
 
-h2#write {
-	position: absolute;
+a#dev {
+/*	position: absolute;
 	right: 21px;
-	bottom: 45px;
+	bottom: 85px;*/
 }
 
-h2#design {
-	position: absolute;
+a#write {
+/*	position: absolute;
 	right: 21px;
-	bottom: 5px;
+	bottom: 45px;*/
+}
+
+a#design {
+/*	position: absolute;
+	right: 21px;
+	bottom: 5px;*/
 }
 
 .stripes {
-   width: 130%;	
+  width: 100%;	
   z-index: 1;
   overflow: hidden;
-  margin-top: 0;
-  border-top: 0;
 }
 
 .top {
     background-color: #F6F792;
-    height: 40px;
+    height: 14px;
 }
 
 .second {
     background-color: #333745;
-    height: 40px;
+    height: 14px;
 }
 
 .third {
     background-color: #DAEDE2;
-    height: 40px;
+    height: 14px;
 }
 
 .bottom {
     background-color: #EA2E49;
-    height: 40px;
+    height: 14px;
 }
 
 @font-face {
