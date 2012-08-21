@@ -5,10 +5,12 @@ body {
 	background: #8C8C8C;*/
 }
 
-.content {
+/*.content {
 	margin-top: -10px;
 	margin-left: -15px;
-}
+}*/
+
+/* !!! header !!! */
 
 h1 { 
 	font-size: 100px; 
@@ -35,6 +37,10 @@ h1 {
 	z-index: 100;
 }
 
+/* end of header */
+
+/* for buttons */
+
 p {
   font-family: 'maven';
   font-size: 24px;
@@ -59,6 +65,8 @@ p {
     background-color: #A4DEAB;
     opacity: .7;
 }
+
+/* end of buttons */
 
 h2 {
 	color: #404040;
@@ -112,6 +120,8 @@ h2#design {
     height: 40px;
 }
 
+/* FONTS */
+
 @font-face {
     font-family: 'maven';
     src: url('fonts/mavenprolight-300-webfont.eot');
@@ -162,12 +172,14 @@ h2#design {
 
 }
 
+/* for crap browsers */
+
 .badbrowser {
     background-color: black;
 }
 
-p.badbrowser {
-    font-family: 'maven';
+.badbrowser p {
+    font-family: 'helvetica';
     font-size: 24px;
     color: white;
     text-align: center;
