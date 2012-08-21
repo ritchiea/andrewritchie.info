@@ -1,6 +1,8 @@
 body {
-	width: 1140px;
-	background: #8C8C8C;
+    margin:0;
+    padding:0;background:#000;
+/*	width: 1140px;
+	background: #8C8C8C;*/
 }
 
 .content {
