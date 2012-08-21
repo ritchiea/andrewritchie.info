@@ -28,6 +28,14 @@ body {
     padding: 10px 20px 10px 20px;
 }
 
+.padded-light {
+    padding: 10px 10px 10px 10px;
+}
+
+.clear {
+    clear:both; 
+}
+
 /* !!! header !!! */
 
 h1 { 
@@ -43,7 +51,7 @@ h1 {
 
 /* for buttons */
 
-p {
+.buttons p {
   font-family: 'maven';
   font-size: 24px;
   color: white;
@@ -73,28 +81,18 @@ p {
 /* meat and potatoes */
 
 h2 {
-	color: #404040;
-	font-family: 'lavanderia_regularregular';
-	font-size: 36px;
+    font-family: 'lavanderia_regularregular';
+    font-size: 36px;
 }
 
-h2#dev {
-	position: absolute;
-	right: 21px;
-	bottom: 85px;
+.content {
+	color: #FFF7F5; /* 404040 */
+    /*position: relative;*/
+    float: right;
+    margin: 315px 0 0 0;
+    /*display: inline-block;*/
 }
 
-h2#write {
-	position: absolute;
-	right: 21px;
-	bottom: 45px;
-}
-
-h2#design {
-	position: absolute;
-	right: 21px;
-	bottom: 5px;
-}
 
 /* FONTS */
 
