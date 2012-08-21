@@ -12,9 +12,20 @@ body {
 
 /* global styles */
 
+.globalwidth {
+    width: 980px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+
 .background {
     background-color: #4C4C4C;
     opacity: .7;
+}
+
+.padded {
+    padding: 10px 20px 10px 20px;
 }
 
 /* !!! header !!! */
@@ -23,23 +34,9 @@ h1 {
 	font-size: 100px; 
 	color: #77C4D3;
 	font-family: 'edmondsans_regularregular';
-	margin: 0 0 0 0;
-	position: absolute;
-    right:21px;
-    top:125px;
+	margin: 80px -20px 0 0;
+    float: right;
     z-index: 101;
-    opacity: .9;
-}
-
-
-.header-background {
-	width: 830px;
-    height: 130px;
-	padding: 0;
-	position: absolute;
-    right:21px;
-    top:125px;
-	z-index: 100;
 }
 
 /* end of header */
@@ -72,6 +69,8 @@ p {
 }
 
 /* end of buttons */
+
+/* meat and potatoes */
 
 h2 {
 	color: #404040;
