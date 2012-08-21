@@ -10,6 +10,13 @@ body {
 	margin-left: -15px;
 }*/
 
+/* global styles */
+
+.background {
+    background-color: #4C4C4C;
+    opacity: .7;
+}
+
 /* !!! header !!! */
 
 h1 { 
@@ -26,10 +33,8 @@ h1 {
 
 
 .header-background {
-    background-color: #4C4C4C;
-	opacity: .7;
 	width: 830px;
-  	height: 130px;
+    height: 130px;
 	padding: 0;
 	position: absolute;
     right:21px;
@@ -90,34 +95,6 @@ h2#design {
 	position: absolute;
 	right: 21px;
 	bottom: 5px;
-}
-
-.stripes {
-   width: 130%;	
-  z-index: 1;
-  overflow: hidden;
-  margin-top: 0;
-  border-top: 0;
-}
-
-.top {
-    background-color: #F6F792;
-    height: 40px;
-}
-
-.second {
-    background-color: #333745;
-    height: 40px;
-}
-
-.third {
-    background-color: #DAEDE2;
-    height: 40px;
-}
-
-.bottom {
-    background-color: #EA2E49;
-    height: 40px;
 }
 
 /* FONTS */
