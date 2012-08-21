@@ -31,9 +31,28 @@
   <!-- big video -->
   <script src="js/bigvideo.js"></script>
   <script>
-  // video background
+  // all js
 
   $(function() {
+
+    // browser detect
+    (function() {
+    
+        var isOpera = !!(window.opera && window.opera.version);  // Opera 8.0+
+        var isFirefox = testCSS('MozBoxSizing');                 // FF 0.8+
+        var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+        // At least Safari 3+: "[object HTMLElementConstructor]"
+        var isChrome = !isSafari && testCSS('WebkitTransform');  // Chrome 1+
+        var isIE = /*@cc_on!@*/false || testCSS('msTransform');  // At least IE6
+    
+        function testCSS(prop) {
+            return prop in document.documentElement.style;
+        }
+
+        if ((isChrome != true) && (isSafari != true)) {
+            $('body').html('<div class="badbrowser"><p>My site uses experimental HTML features not supported by your browser, try Chrome or Safari. Sorry! For your trouble, here is a photo of a cute kitten in a parka: <img src="images/cat.jpg"></p></div>')
+        }
+        })();
 
     // initialize video
     var BV = new $.BigVideo();
@@ -54,10 +73,9 @@
                     })
             }) })();
 
+    // browser check 
 
-    // $('#video-toggle').on('click', function(e) {
-    // if (this.checked)   BV.getPlayer().play();
-    // else                BV.getPlayer().pause();
+
    });
 
   </script>

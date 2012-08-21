@@ -161,3 +161,14 @@ h2#design {
     font-style: normal;
 
 }
+
+.badbrowser {
+    background-color: black;
+}
+
+p.badbrowser {
+    font-family: 'maven';
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}
