@@ -35,6 +35,10 @@ h1 {
 	z-index: 100;
 }
 
+p {
+
+}
+
 h2 {
 	color: #404040;
 	font-family: 'lavanderia_regularregular';
@@ -85,6 +89,18 @@ h2#design {
 .bottom {
     background-color: #EA2E49;
     height: 40px;
+}
+
+@font-face {
+    font-family: 'maven_pro';
+    src: url('fonts/mavenprolight-300-webfont.eot');
+    src: url('fonts/mavenprolight-300-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/mavenprolight-300-webfont.woff') format('woff'),
+         url('fonts/mavenprolight-300-webfont.ttf') format('truetype'),
+         url('fonts/mavenprolight-300-webfont.svg#maven_pro_light_300regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 @font-face {
