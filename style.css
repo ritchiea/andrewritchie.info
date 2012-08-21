@@ -36,7 +36,28 @@ h1 {
 }
 
 p {
+  font-family: 'maven';
+  font-size: 24px;
+  color: white;
+  margin: 8px 0 0 10px;
+}
 
+#pause {
+    cursor: pointer;
+}
+
+#play {
+    cursor: pointer;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 40px;
+    width: 85px;
+    background-color: #A4DEAB;
+    opacity: .7;
 }
 
 h2 {
@@ -92,7 +113,7 @@ h2#design {
 }
 
 @font-face {
-    font-family: 'maven_pro';
+    font-family: 'maven';
     src: url('fonts/mavenprolight-300-webfont.eot');
     src: url('fonts/mavenprolight-300-webfont.eot?#iefix') format('embedded-opentype'),
          url('fonts/mavenprolight-300-webfont.woff') format('woff'),

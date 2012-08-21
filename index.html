@@ -15,8 +15,8 @@
 	    </div>
 	    <h1 id="identity">Andrew Ritchie is...</h1>
 
-        <div class="pause">
-        <p>Pause</p>
+        <div class="buttons">
+        <p><a id="pause">Pause</a></p>
         </div>
     </div><!-- end of .content -->
 
@@ -34,9 +34,30 @@
   // video background
 
   $(function() {
+
+    // initialize video
     var BV = new $.BigVideo();
     BV.init();
     BV.show('movies/walking.mov',{ambient:true});
+
+    // pause button
+
+    (function buttons() {
+    
+                $('#pause').on('click', function(e) {
+                BV.getPlayer().pause();
+                $('.buttons').html('<p><a id="play">Play</a></p>');
+                $('#play').on('click', function(e) {
+                    BV.getPlayer().play();
+                    $('.buttons').html('<p><a id="pause">Pause</a></p>');
+                    buttons();
+                    })
+            }) })();
+
+
+    // $('#video-toggle').on('click', function(e) {
+    // if (this.checked)   BV.getPlayer().play();
+    // else                BV.getPlayer().pause();
    });
 
   </script>
