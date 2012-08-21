@@ -49,7 +49,7 @@
         }
 
         if ((isChrome != true) && (isSafari != true)) {
-            $('body').html('<div class="badbrowser"><p>Sorry! My site uses bleeding edge new HTML features not supported by your browser, try Chrome or Safari. For your trouble, here is a photo of a cute kitten in a parka: <img src="images/cat.jpg"></p></div>')
+          $('body').html('<div class="badbrowser"><p>Sorry! My site uses bleeding edge new HTML features not supported by your browser, try Chrome or Safari. For your trouble, here is a photo of a cute kitten in a parka: <img src="images/cat.jpg"></p></div>')
         }
         })();
 
@@ -62,17 +62,16 @@
 
     (function buttons() {
     
-                $('#pause').on('click', function(e) {
-                BV.getPlayer().pause();
-                $('.buttons').html('<p><a id="play">Play</a></p>');
-                $('#play').on('click', function(e) {
-                    BV.getPlayer().play();
-                    $('.buttons').html('<p><a id="pause">Pause</a></p>');
-                    buttons();
-                    })
-            }) })();
+      $('#pause').on('click', function(e) {
+        BV.getPlayer().pause();
+        $('.buttons').html('<p><a id="play">Play</a></p>');
+        $('#play').on('click', function(e) {
+            BV.getPlayer().play();
+            $('.buttons').html('<p><a id="pause">Pause</a></p>');
+            buttons();
+            })
 
-    // browser check 
+      }) })(); // end of button anon function
 
 
    });  // end of js
