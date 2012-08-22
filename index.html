@@ -12,7 +12,9 @@
 
 
 	    <h1 id="identity" class="background padded">Andrew Ritchie is...</h1>
-      <h2 id="dev" class="content background padded-light clear">a developer</h2>
+      <h2 id="designer" class="content background clear">a designer</h2>
+      <h2 id="writer" class="content background">a writer</h2>
+      <h2 id="developer" class="content background">a developer</h2>
 
 
     </div><!-- end of .globalwidth -->
@@ -36,47 +38,47 @@
 
     $(function() {
 
-     // browser detect
-    (function() {
-    
-        var isOpera = !!(window.opera && window.opera.version);  // Opera 8.0+
-        var isFirefox = testCSS('MozBoxSizing');                 // FF 0.8+
-        var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
-        // At least Safari 3+: "[object HTMLElementConstructor]"
-        var isChrome = !isSafari && testCSS('WebkitTransform');  // Chrome 1+
-        var isIE = /*@cc_on!@*/false || testCSS('msTransform');  // At least IE6
-    
-        function testCSS(prop) {
-            return prop in document.documentElement.style;
-        }
+      // initialize video
+      var BV = new $.BigVideo();
+      BV.init();
+      BV.show('http://wearecyborgs.net/video/walking.mov',{ambient:true});
 
-        if ((isChrome != true) && (isSafari != true)) {
-          $('body').html('<div class="badbrowser"><p>Sorry! My site uses bleeding edge new HTML features not supported by your browser, try Chrome or Safari. For your trouble, here is a photo of a cute kitten in a parka: <img src="images/cat.jpg"></p></div>')
-        }
-        })();
+      // browser detect
+      (function() {
+      
+          var isOpera = !!(window.opera && window.opera.version);  // Opera 8.0+
+          var isFirefox = testCSS('MozBoxSizing');                 // FF 0.8+
+          var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+          // At least Safari 3+: "[object HTMLElementConstructor]"
+          var isChrome = !isSafari && testCSS('WebkitTransform');  // Chrome 1+
+          var isIE = /*@cc_on!@*/false || testCSS('msTransform');  // At least IE6
+      
+          function testCSS(prop) {
+              return prop in document.documentElement.style;
+          }
 
-    // initialize video
-    var BV = new $.BigVideo();
-    BV.init();
-    BV.show('http://wearecyborgs.net/video/walking.mov',{ambient:true});
+          if ((isChrome != true) && (isSafari != true)) {
+            $('body').html('<div class="badbrowser"><p>Sorry! My site uses bleeding edge new HTML features not supported by your browser, try Chrome or Safari. For your trouble, here is a photo of a cute kitten in a parka: <img src="images/cat.jpg"></p></div>')
+          }
+          })();
 
-    // pause button
+      // pause button
 
-    (function buttons() {
-    
-      $('#pause').on('click', function(e) {
-        BV.getPlayer().pause();
-        $('.buttons').html('<p><a id="play">Play</a></p>');
-        $('#play').on('click', function(e) {
-            BV.getPlayer().play();
-            $('.buttons').html('<p><a id="pause">Pause</a></p>');
-            buttons();
-            })
+      (function buttons() {
+      
+        $('#pause').on('click', function(e) {
+          BV.getPlayer().pause();
+          $('.buttons').html('<p><a id="play">Play</a></p>');
+          $('#play').on('click', function(e) {
+              BV.getPlayer().play();
+              $('.buttons').html('<p><a id="pause">Pause</a></p>');
+              buttons();
+              })
 
-      }) })(); // end of button anon function
+        }) })(); // end of button anon function
 
 
-   });  // end of js
+     });  // end of js
 
   </script>
  </body>
