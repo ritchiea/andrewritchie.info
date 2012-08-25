@@ -72,7 +72,7 @@ h1 {
 
 /* end of buttons */
 
-/* meat and potatoes */
+/* bottom nav */
 
 h2 {
     font-family: 'lavanderia_regularregular';
@@ -99,6 +99,8 @@ h2 {
 .nav-tab:hover {
     color: rgb(220,220,220);
 }
+
+/* end of nav */
 
 /* FONTS */
 
