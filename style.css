@@ -87,7 +87,7 @@ h2 {
     width: 600px;
 }
 
-.content {
+.nav-tab {
 	  color: #8C8C8C; /* 404040 */
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -96,7 +96,7 @@ h2 {
     margin: 0 10px 0 10px;
 }
 
-.content:hover {
+.nav-tab:hover {
     color: rgb(220,220,220);
 }
 
