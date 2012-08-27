@@ -8,13 +8,13 @@
 
  </head>
  <body>
-    <div class="globalwidth">
+    <div class="header">
 
 
 	    <h1 id="identity" class="background padded shadow">Andrew Ritchie is...</h1>
 
+    </div><!-- end of .header -->
 
-    </div><!-- end of .globalwidth -->
     <div class="content background padded clear">
 
     </div> <!-- end of content -->
@@ -41,6 +41,8 @@
 
   <!-- big video -->
   <script src="js/bigvideo.js"></script>
+  <!-- easing -->
+  <script src="js/effects.core.js"></script>
   <script>
 
     $(function() {
@@ -96,10 +98,15 @@
           $('#developer').on('click', function(e) {
 
             if (visible===false) {
-             $content.html('<p>Andrew is a developer<p>');
-             $content.show('fast', function() {
-              visible = true;
-              console.log("Visible is set: "+visible);
+             $content
+               .html('<p>Andrew is a developer<p>')
+               .animate({height: "show", width: "show"}, 
+                  1000, 
+                  "easeOutBounce", 
+                  function() {
+                visible = true;
+                console.log("Visible is set: "+visible);
+                return visible;
               // Animation complete.
               });
            }
@@ -112,13 +119,18 @@
           $('#designer').on('click', function(e) {
 
             if (visible===false) {
-                 $content.html('<p>Andrew is a designer<p>');
-                 $content.show('fast', function() {
-                  visible = true;
-                  console.log("Visible is set: "+visible);
-                  // Animation complete.
-                  });
-            }
+             $content
+               .html('<p>Andrew is a designer<p>')
+               .animate({height: "show", width: "show"}, 
+                  1000, 
+                  "easeOutBounce", 
+                  function() {
+                visible = true;
+                console.log("Visible is set: "+visible);
+                return visible;
+              // Animation complete.
+              });
+           }
 
             else {
                 $content.html('<p>Andrew is a designer<p>');
@@ -128,13 +140,18 @@
           $('#writer').on('click', function(e) {
 
             if (visible===false) {
-                 $content.html('<p>Andrew is a writer<p>');
-                 $content.show('fast', function() {
-                  visible = true;
-                  console.log("Visible is set: "+visible);
-                  // Animation complete.
-                  });
-            }
+             $content
+               .html('<p>Andrew is a writer<p>')
+               .animate({height: "show", width: "show"}, 
+                  1000, 
+                  "easeOutBounce", 
+                  function() {
+                visible = true;
+                console.log("Visible is set: "+visible);
+                return visible;
+              // Animation complete.
+              });
+           }
 
             else {
                 $content.html('<p>Andrew is a writer<p>');

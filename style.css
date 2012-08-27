@@ -6,7 +6,7 @@ body {
 
 /* global styles */
 
-.globalwidth {
+.header {
     width: 980px;
     margin: 0 auto;
     position: relative;
@@ -20,9 +20,10 @@ body {
 
 .content {
   position: relative;
-  margin-top: 50px;
+  margin: 50px 40px 0px 0px;
   float: right;
   display: none;
+  border-radius: 3px;
 }
 
 .padded {
