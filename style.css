@@ -18,6 +18,13 @@ body {
     opacity: .7;
 }
 
+.content {
+  position: relative;
+  margin-top: 50px;
+  float: right;
+  display: none;
+}
+
 .padded {
     padding: 10px 20px 10px 20px;
 }
@@ -71,6 +78,17 @@ h1 {
 }
 
 /* end of buttons */
+
+/* content */
+
+.content p {
+    font-family: 'edmondsans_regularregular';
+    font-size: 24px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+/* end of content */
 
 /* bottom nav */
 

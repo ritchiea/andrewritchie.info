@@ -15,7 +15,10 @@
 
 
     </div><!-- end of .globalwidth -->
-    
+    <div class="content background padded clear">
+
+    </div> <!-- end of content -->
+
     <div class="bottom-nav shadow">
       <h2 id="contact" class="nav-tab background">@</h2>
       <h2 id="designer" class="nav-tab background">a designer</h2>
@@ -41,11 +44,8 @@
   <script>
 
     $(function() {
-
-      // initialize video
-      var BV = new $.BigVideo();
-      BV.init();
-      BV.show('http://wearecyborgs.net/video/walking.mov',{ambient:true});
+      
+      var BV;
 
       // browser detect
       (function() {
@@ -66,6 +66,12 @@
           }
           })();
 
+
+      // initialize video
+      BV = new $.BigVideo();
+      BV.init();
+      BV.show('http://wearecyborgs.net/video/walking.mov',{ambient:true});
+
       // pause button
 
       (function buttons() {
@@ -80,6 +86,62 @@
               })
 
         }) })(); // end of button anon function
+
+      (function() {
+
+        var visible = false;
+        var $content = $('.content:first');
+        console.log("Visible is set: "+visible);
+
+          $('#developer').on('click', function(e) {
+
+            if (visible===false) {
+             $content.html('<p>Andrew is a developer<p>');
+             $content.show('fast', function() {
+              visible = true;
+              console.log("Visible is set: "+visible);
+              // Animation complete.
+              });
+           }
+
+            else {
+             $content.html('<p>Andrew is a developer<p>');
+            }
+          });  // end of developer event handler
+
+          $('#designer').on('click', function(e) {
+
+            if (visible===false) {
+                 $content.html('<p>Andrew is a designer<p>');
+                 $content.show('fast', function() {
+                  visible = true;
+                  console.log("Visible is set: "+visible);
+                  // Animation complete.
+                  });
+            }
+
+            else {
+                $content.html('<p>Andrew is a designer<p>');
+            }
+          });  // end of designer event handler
+
+          $('#writer').on('click', function(e) {
+
+            if (visible===false) {
+                 $content.html('<p>Andrew is a writer<p>');
+                 $content.show('fast', function() {
+                  visible = true;
+                  console.log("Visible is set: "+visible);
+                  // Animation complete.
+                  });
+            }
+
+            else {
+                $content.html('<p>Andrew is a writer<p>');
+            }
+          });  // end of writer event handler
+
+      })();  //end of bottom-nav anon function
 
 
      });  // end of js
