@@ -6,7 +6,7 @@ body {
 
 /* global styles */
 
-.globalwidth {
+.header {
     width: 980px;
     margin: 0 auto;
     position: relative;
@@ -16,6 +16,14 @@ body {
 .background {
     background-color: #4C4C4C;
     opacity: .7;
+}
+
+.content {
+  position: relative;
+  margin: 50px 40px 40px 0px;
+  float: right;
+  display: none;
+  border-radius: 3px;
 }
 
 .padded {
@@ -72,7 +80,29 @@ h1 {
 
 /* end of buttons */
 
-/* meat and potatoes */
+/* content */
+
+.content p {
+    font-family: 'edmondsans_regularregular';
+    font-size: 18px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.content a {
+    text-decoration: none;
+}
+
+#buzz {
+  float: left;
+  width: 187px;
+  height: 329px;
+  margin-right: 10px;
+}
+
+/* end of content */
+
+/* bottom nav */
 
 h2 {
     font-family: 'lavanderia_regularregular';
@@ -99,6 +129,8 @@ h2 {
 .nav-tab:hover {
     color: rgb(220,220,220);
 }
+
+/* end of nav */
 
 /* FONTS */
 

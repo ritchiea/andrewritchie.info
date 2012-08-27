@@ -8,24 +8,27 @@
 
  </head>
  <body>
-    <div class="globalwidth">
+    <div class="header">
 
 
 	    <h1 id="identity" class="background padded shadow">Andrew Ritchie is...</h1>
 
+    </div><!-- end of .header -->
 
-    </div><!-- end of .globalwidth -->
-    
+    <div class="content background padded clear">
+
+    </div> <!-- end of content -->
+
     <div class="bottom-nav shadow">
-    <h2 id="contact" class="nav-tab background">@</h2>
-    <h2 id="designer" class="nav-tab background">a designer</h2>
-    <h2 id="writer" class="nav-tab background">a writer</h2>
-    <h2 id="developer" class="nav-tab background">a developer</h2>
+      <h2 id="contact" class="nav-tab background">@</h2>
+      <h2 id="designer" class="nav-tab background">a designer</h2>
+      <h2 id="writer" class="nav-tab background">a writer</h2>
+      <h2 id="developer" class="nav-tab background">a developer</h2>
     </div> <!-- end of bottom nav -->
 
     <div class="buttons">
-    <p><a id="pause">Pause</a><p>
-    </div>
+      <p><a id="pause">Pause</a><p>
+    </div><!-- end of buttons -->
 
   <!-- scripts!! w00t --> 
   <!-- jquery & ui -->
@@ -38,14 +41,14 @@
 
   <!-- big video -->
   <script src="js/bigvideo.js"></script>
+  <!-- easing -->
+  <script src="js/effects.core.js"></script>
+  <script src="script.js"></script>
   <script>
 
     $(function() {
-
-      // initialize video
-      var BV = new $.BigVideo();
-      BV.init();
-      BV.show('http://wearecyborgs.net/video/walking.mov',{ambient:true});
+      
+      var BV;
 
       // browser detect
       (function() {
@@ -66,11 +69,16 @@
           }
           })();
 
-      // pause button
+      // initialize video
+      BV = new $.BigVideo();
+      BV.init();
+      BV.show('http://wearecyborgs.net/video/walking.mov',{ambient:true});
+
+        // pause button
 
       (function buttons() {
       
-        $('#pause').on('click', function(e) {
+         $('#pause').on('click', function(e) {
           BV.getPlayer().pause();
           $('.buttons').html('<p><a id="play">Play</a></p>');
           $('#play').on('click', function(e) {
@@ -80,7 +88,6 @@
               })
 
         }) })(); // end of button anon function
-
 
      });  // end of js
 
