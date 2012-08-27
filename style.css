@@ -20,7 +20,7 @@ body {
 
 .content {
   position: relative;
-  margin: 50px 40px 0px 0px;
+  margin: 50px 40px 40px 0px;
   float: right;
   display: none;
   border-radius: 3px;
@@ -84,9 +84,20 @@ h1 {
 
 .content p {
     font-family: 'edmondsans_regularregular';
-    font-size: 24px;
+    font-size: 18px;
     color: white;
     text-shadow: 1px 1px 1px black;
+}
+
+.content a {
+    text-decoration: none;
+}
+
+#buzz {
+  float: left;
+  width: 187px;
+  height: 329px;
+  margin-right: 10px;
 }
 
 /* end of content */
