@@ -1,13 +1,21 @@
 $(function () { // do this and protect scope rather than doc ready
 
-      (function() {
 
-        var visible = false;
         var dev_expanded = false;
         var wri_expanded = false;
         var des_expanded = false;
+        var con_expanded = false;
+        var visible = false;
         var $content = $('.content:first');
         // console.log("Visible is set: "+visible);
+
+        function set_all_tabs_false() {
+                  dev_expanded = false;
+                  wri_expanded = false;
+                  des_expanded = false;
+                  con_expanded = false;
+                }
+
 
           $('#developer').on('click', function(e) {
 
@@ -29,9 +37,8 @@ $(function () { // do this and protect scope rather than doc ready
                   "easeOutBounce", 
                   function() {
                 visible = true;
+                set_all_tabs_false();
                 dev_expanded=true;
-                wri_expanded=false;
-                des_expanded=false;
                 // console.log("Visible is set: "+visible);
               // Animation complete.
               });
@@ -52,9 +59,8 @@ $(function () { // do this and protect scope rather than doc ready
               & Backbone. Lately I'm interested in  \
               product focused apps with robust clients.")
              .animate({height: "show", width: "show"}, 1000, "easeOutBounce");
+            set_all_tabs_false();
             dev_expanded=true;
-            wri_expanded=false;
-            des_expanded=false;
             }
           });  // end of developer event handler
 
@@ -89,7 +95,7 @@ $(function () { // do this and protect scope rather than doc ready
                 <a href='http://freewilliamsburg.com'>FreeWilliamsburg</a>\
                 , <a href='http://bushwickbk.com' target='_blank'>BushwickBK</a>\
                 , <a href='http://wearecyborgs.net' target='_blank'>We Are Cyborgs</a>,\
-                and like to gather my friends to share work at\
+                and like to gather my friends to read work at\
                 <a href='http://theplateis.us' target='_blank'>the Plate</a>.<br/><br/>\
                 I share my thoughts on twitter as \
                 <a href='http://twitter.com/whackandrew' target='_blank'>@whackandrew</a>.\
@@ -97,15 +103,12 @@ $(function () { // do this and protect scope rather than doc ready
                .css('width', 400)
                .animate({height: "show", width: "show"}, 
                   1000, 
-                  "easeOutBounce", 
-                  function() {
+                  "easeOutBounce");
                 visible = true;
                 // console.log("Visible is set: "+visible);
-                dev_expanded=false;
+                set_all_tabs_false();
                 wri_expanded=true;
-                des_expanded=false;
               // Animation complete.
-              });
            }
 
             if ((visible===true) && (wri_expanded===false)) {
@@ -118,18 +121,15 @@ $(function () { // do this and protect scope rather than doc ready
               <a href='http://freewilliamsburg.com'>FreeWilliamsburg</a>\
               , <a href='http://bushwickbk.com' target='_blank'>BushwickBK</a>\
               , <a href='http://wearecyborgs.net' target='_blank'>We Are Cyborgs</a>,\
-              and like to gather my friends to share work at\
+              and like to gather my friends to read work at\
               <a href='http://theplateis.us' target='_blank'>the Plate</a>.<br/><br/>\
               I share my thoughts on twitter as \
               <a href='http://twitter.com/whackandrew' target='_blank'>@whackandrew</a>.\
               <br/><br/>And I am still banging away at that first novel.")
              .animate({height: "show", width: "show"}, 1000, "easeOutBounce");
-              dev_expanded=false;
+              set_all_tabs_false();
               wri_expanded=true;
-              des_expanded=false;             
             }
           });  // end of writer event handler
 
-      })();  //end of bottom-nav anon function
-
-}); // end of jquery
+      }); // end of jquery
