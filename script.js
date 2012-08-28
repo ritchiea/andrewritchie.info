@@ -30,7 +30,9 @@ $(function () { // do this and protect scope rather than doc ready
                 I like Ruby, Rails, jQuery & Javascript.<br/><br/>\
                 I recently started working with Node, Coffeescript \
                 & Backbone. Lately I'm interested in  \
-                product focused apps with robust clients.")
+                product focused apps with robust clients.<br/><br/>\
+                <a href='http://github.com/ritchiea' target='_blank'>\
+                ritchiea</a> on github")
                .css('width', 500)
                .animate({height: "show", width: "show"}, 
                   1000, 
@@ -51,15 +53,17 @@ $(function () { // do this and protect scope rather than doc ready
               .removeClass('design')
               .css('width', 500)
               .html("<img id='buzz' src='images/cbuzz.png'>\
-              <p>A full stack developer who most recently\
-              worked for <a href='http://charitybuzz.com' target='_blank'>\
-              CharityBuzz</a>\
-              focusing on mobile development, AJAX UI enhancements,\
-              and internal tools for account managers.<br/><br/>\
-              I like Ruby, Rails, jQuery & Javascript.<br/><br/>\
-              I recently started working with Node, Coffeescript \
-              & Backbone. Lately I'm interested in  \
-              product focused apps with robust clients.")
+                <p>A full stack developer who most recently\
+                worked for <a href='http://charitybuzz.com' target='_blank'>\
+                CharityBuzz</a>\
+                focusing on mobile development, AJAX UI enhancements,\
+                and internal tools for account managers.<br/><br/>\
+                I like Ruby, Rails, jQuery & Javascript.<br/><br/>\
+                I recently started working with Node, Coffeescript \
+                & Backbone. Lately I'm interested in  \
+                product focused apps with robust clients.<br/><br/>\
+                <a href='http://github.com/ritchiea' target='_blank'>\
+                ritchiea</a> on github")
              .animate({height: "show", width: "show"}, 1000, "easeOutBounce");
             set_all_tabs_false();
             dev_expanded=true;
