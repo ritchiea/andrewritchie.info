@@ -48,8 +48,6 @@
 
     $(function() {
       
-      var BV;
-
       // browser detect
       (function() {
       
@@ -70,7 +68,7 @@
           })();
 
       // initialize video
-      BV = new $.BigVideo();
+      var BV = new $.BigVideo();
       BV.init();
       BV.show('http://wearecyborgs.net/video/walking.mov',{ambient:true});
 
