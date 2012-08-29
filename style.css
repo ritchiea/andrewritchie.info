@@ -112,7 +112,7 @@ h1 {
 }
 
 .design {
-  width: 800px !important;
+  /*width: 800px !important;*/
   height: 350px;
   overflow: scroll;
 }

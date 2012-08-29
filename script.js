@@ -89,8 +89,9 @@ $(function () { // do this and protect scope rather than doc ready
                 <a href='http://irismediaworks.com' target='_blank'> \
                 IrisMediaWorks</a> childrens \
                 film <em>Berel and the Busdriver</em>.</p>")
+               .css('width', 800)
                .animate({height: "show", width: "show"}, 
-                  1000, 
+                  1250, 
                   "easeOutBounce");
                 visible = true;
                 // console.log("Visible is set: "+visible);
@@ -104,6 +105,7 @@ $(function () { // do this and protect scope rather than doc ready
               .empty()
               .css('display', 'none')
               .addClass('design')
+              .css('width', 800)
               .html("<img class='obama' src='images/where.png'> \
                 <img class='obama' src='images/vopro.png'> \
                 <img id='borgs' src='images/cy_small.png'>\
@@ -118,7 +120,7 @@ $(function () { // do this and protect scope rather than doc ready
                 <a href='http://irismediaworks.com' target='_blank'> \
                 IrisMediaWorks</a> childrens \
                 film <em>Berel and the Busdriver</em>.</p>")
-             .animate({height: "show", width: "show"}, 1000, "easeOutBounce");
+             .animate({height: "show", width: "show"}, 1250, "easeOutBounce");
               set_all_tabs_false();
               des_expanded=true;
             }
